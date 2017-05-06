@@ -152,6 +152,16 @@ In the McAfee report, the volume of malicious samples cataloged per quarter ebbs
 This data showed a decline during the past three quarters which mirrored the trend we observed at the start of 2015. 
 A pattern of two to three quarters of growth followed by three quarters of decline has been consistent since 2013. \cite{QT17}
 
+\section{Design Comparison}
+There were many iterations of design ideas that went into this visualization page, ranging from grand scheme design choices to small implementation tweaks.
+This basic framework stayed throughout the process, but the design of it evolved over time. 
+A scroll bar for different months of data was one of the big things that was added, as well as a pie chart breaking down the data within each category upon clicking on one.
+Each of the industries has their own section, and these all contain data about which types of attacks are most prevalent.
+
+A number of arrangement ideas for the data were compared, with the look eventually settling on one of differently sized and colored blocks.
+These help to display the distribution difference both with color and size, so that someone with some form of visual impairment is likely to still be able to tell the difference.
+There was much discussion over the use of a red to green scale, since a number of colorblind people may be affected, but it made the most sense for our data, and the size difference help to provide a backup for this.
+
 \section{Implementation}
 We will implement the ER diagram by putting the data from Symantec into a mySQL database that is hosted by OSU using PHP.
 We will have two tables, one that contains industries and the total number of attacks, along with threat ID’s that correspond to a type of threat, the number of attacks, and the date associated with the report. 
