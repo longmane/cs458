@@ -87,7 +87,12 @@
 %\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
 
 %% Abstract section.
-%%\abstract{ } % end of abstract
+\abstract{ Businesses are targeted by cyber attacks every day, and there is no efficient way to visualize the industries that are most at risk and the types of attacks they are vulnerable to. 
+Our research focuses on constructing a useful visualization for security professional’s so they know what industries are most in need of their services.
+Currently, there are no interactive visualizations that solve this specific security problem.
+However, we built on previous research that looked at different problems in security visualization.
+The benefits of this visualization is to provide a tool that allows users to easily discover sectors most at risk so we can work towards keeping people’s information safe. 
+} % end of abstract
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
 %% please capitalize first letter and insert punctuation after last keyword
@@ -128,7 +133,7 @@
 
 \maketitle
 
-\section*{Introduction} %for journal use above \firstsection{..} instead
+\section{Introduction} %for journal use above \firstsection{..} instead
 Cybersecurity is a serious concern, or at least should be, for almost every industry.
 In the modern world relies heavily on computers of all forms, for basic tasks like checking the weather to heavy industrial computation.
 The data stored and processed by these systems can be very valuable and targeted for theft.
@@ -136,77 +141,85 @@ Because of this there has been an ever-growing list of malware used to break int
 Today, with nearly 40 years of enterprise computer usage, there is a lot of data available on the exploits, but it can be very technical and hard to sift through. 
 With information visualization we can do a better job on analyzing these trends, which allows the creation of better defenses against future attacks.
 
-\section{Visualization Tasks}
+\section{Related Work}
+
+We looked at research in the field of cybersecurity and information visualization to see any problems people encountered and how we can avoid those challenges when creating our own visualization. 
+We were also interested in seeing if there has been any visualizations on the same topic and if we could build on that work for our own project. 
+
+\subsection{Challenges in Visualization for Cyber Security}
+
+Gates and Engle looked at why cyber security visualization has not been more effective in the past, how visualization can be utilized in cyber security, and how to evaluate cyber security visualization \cite{S1}. 
+One of their main points is that you should not create a visualization for the sake of visualization and you should always have a clear problem that you would like to solve. 
+Aesthetics should always come second to displaying information clearly and concisely. 
+They also emphasize how the process should always be evaluated and case studies are sufficient for valuable feedback instead of large user studies.  
+Best, Endert and Kidwell looked at seven key challenges when creating visualizations for cyber security \cite{S2}. 
+The challenges that they encountered when developing a network security visualization that are most related to our problem had to do with their data sources. 
+One of the issues in cyber security visualization is that there is so much data that only a small subset of data is compared when analyzing an event. 
+This can be problematic because important information can be left out. 
+Additionally, The diversity and quantity of security information provides challenges and it is important that users take into account the scope and validity of their data. 
+
+\subsection{Evaluation Methods for Cyber Security Visualizations}
+
+It is critical to evaluate visualizations in order to determine whether or not the product is usable and solves the problem that is addressed. 
+Langton and Baker explored various evaluation methods specifically in the domain of security and provided recommendations based on their test results \cite{S3}. 
+It was found that design heuristics and user studies are effective for creating information visualizations in the field of cyber security. 
+The methodology discussed for measuring the complexity of computer security visualization designs was developed by Suo, Zhu, and Owen [SOURCE] and they tested this method by evaluating TNV and RUMINT cyber visualization tools. 
+Metrics such as color, shape and size were used to evaluate the complexity of the visualization. The user testing consisted of using common metrics such as task success, time on task, and errors. 
+
+\subsection{Design in Information Visualization }
+
+According to Moere and Purchase, good design is a fine balance between utility, soundness, and attractiveness [SOURCE]. 
+The requirement of attractiveness was investigated in and a model of the potential roles of design in information visualization was created. 
+The model is made up of three distinct categories of visualization: practice, studies, and exploration. 
+This model was based off the interaction design triangle developed by Fallman [SOURCE]. 
+It was also recommended that pastel colors are used in visualizations to add less eye strain on the user. 
+The journal article “Fluid interaction for information visualization” explored different types of interactions to consider when designing a visualization and created a set of guidelines for creating fluid interactions[SOURCE]. 
+Some of the main guidelines consisted of using providing immediate visual feedback on interaction, minimize indirection in the interface, integrate user interface components in the visual representation. 
+The guidelines closely followed Nielsen’s 10 usability heuristics [SOURCE]. 
+Lastly, The design of our visualization was influenced by the stock market visualizations that organized all of the data by industry sector[SOURCE]. 
+
+\section{Method}
+
+\subsection{Method Overview}
+
+\subsection{Visualization Tasks}
 The question we are trying to answer is what industries are most vulnerable to cyber attacks and what types of attacks are most prevalent. 
 This problem is important because it provides a way for cybersecurity companies to see which industries are most in need of their services. 
 It also allows industries that are most affected by cyber attacks to see which types of threats they are most vulnerable to.
 
-\section{Data Sources}
+\subsection{Data Sources}
 There are plenty of security companies that disclose information about cyber attacks. 
 Popular cyber security companies such as Symantec, McAfee, Malwarebytes publish monthly and yearly threat reports about different kinds of attacks. 
 Symantec organizes the monthly threat report into five different categories: Malware, Web Attacks, Spam, Phishing, Mobile, and Social Media. 
-They also give information about the number of threats per industry. \cite{SMR}
+They also give information about the number of threats per industry \cite{SMR}.
 Malwarebytes publishes a state of malware report every year which contains information on the most common types of attacks with a focus on ransomware trends in particular. 
 They give trends of different threats over the last three years, which provides a more thorough data set. \cite{MWB}
 In the McAfee report, the volume of malicious samples cataloged per quarter ebbs and flows quarterly and annually. 
 This data showed a decline during the past three quarters which mirrored the trend we observed at the start of 2015. 
 A pattern of two to three quarters of growth followed by three quarters of decline has been consistent since 2013. \cite{QT17}
 
+\subsection{Design Comparison}
+There were many iterations of design ideas that went into this visualization page, ranging from grand scheme design choices to small implementation tweaks.
+This basic framework stayed throughout the process, but the design of it evolved over time. 
+A scroll bar for different months of data was one of the big things that was added, as well as a pie chart breaking down the data within each category upon clicking on one.
+Each of the industries has their own section, and these all contain data about which types of attacks are most prevalent.
+
+A number of arrangement ideas for the data were compared, with the look eventually settling on one of differently sized and colored blocks.
+These help to display the distribution difference both with color and size, so that someone with some form of visual impairment is likely to still be able to tell the difference.
+There was much discussion over the use of a red to green scale, since a number of colorblind people may be affected, but it made the most sense for our data, and the size difference help to provide a backup for this.
+
+\section{Enhancements}
+
 \section{Implementation}
 We will implement the ER diagram by putting the data from Symantec into a mySQL database that is hosted by OSU using PHP.
 We will have two tables, one that contains industries and the total number of attacks, along with threat ID’s that correspond to a type of threat, the number of attacks, and the date associated with the report. 
 We can compare this data by looking at different sectors and how they vary by the attacks that are most common.
 
-\section{ER Diagram}
-The diagram for this project can be seen in Figure 1.
-\begin{figure}[tb]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{erdigram}
- \caption{Layout of how different sources are related}
- \label{fig:sample}
-\end{figure}
+\section{Results and Performance}
 
-\section{Design Ideas}
-\begin{figure}[tb]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{Design1}
- \caption{Representation of attacks within different industries, utilizing color and size to represent the data visually}
- \label{fig:sample}
-\end{figure}
+\section{Applications Paper}
 
-This is the main part of the design, which can be seen in Figure 2. 
-Each square represents an industry, labeled below it. 
-The squares get larger and shift from green to yellow to red the more prevalent cyber attacks are in an industry. 
-At a glance it is easy to tell which industry has the biggest problem with cyber attacks. 
-Each box is labeled below, and inside the box is the total number of attacks per month (this is not real data). 
-Something we put a lot of thought into while designing is the possibility of colorblind users, as they are quite common. 
-In this part of the design, and in the rest, it should be noted that the design does not rely on color, and has an alternative way of conveying this information.
-
-When hovering over any box with one’s mouse, say, the Agriculture box:
-\begin{figure}[tb]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{Design2}
- \caption{Provides a breakdown of the prevalence of specific attack types within an industry}
- \label{fig:sample}
-\end{figure}
-You can see in Figure 3 that a pie chart has appeared above the square, with slices colored and sized based on cyber attack type. 
-This shows the user a breakdown of not only what industry is subjected to attacks, but the distribution of attacks as well.
-You might note the small size of the light green slice, and how there is only a number, not a label inside it. 
-The is because the name cannot fit in the slice. 
-The last part of the design can be seen by hovering over a slice to learn more about it.
-
-For example, hovering over the small green slice: 
-\begin{figure}[tb]
- \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
- \includegraphics[width=\columnwidth]{Design3}
- \caption{A further breakdown, providing source details for each attack type}
- \label{fig:sample}
-\end{figure}
-This tab in figure 4 shows the detailed information we have about the attack, such as its name, the id we assign it, the occurrences per month (displayed on the slice) the total occurrences, and recent reports of the attack. 
-This is a bit of a wall of text, but there isn’t much more we can do there, as this is detailed information that does not translate as well into a fancy graphic. 
-This tab always opens to the right, to avoid running into taller industry squares.
-
-\section{Conclusion}
+\section{Conclusions and Future Work}
 This topic has a wide variety of data sources which can be combined and compared in interesting ways to draw a variety of conclusions.
 With database manipulations and interesting front-end visualization this raw data can be made into something very interesting.
 The better the visualization, the better users can understand the information and gain valuable security knowledge.
@@ -220,4 +233,3 @@ The better the visualization, the better users can understand the information an
 
 \bibliography{secure_viz}
 \end{document}
-

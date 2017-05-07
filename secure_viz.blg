@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: secure_viz.aux
+The style file: abbrv-doi.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: secure_viz.bib
+Warning--entry type for "SMR" isn't style-file defined
+--line 1 of file secure_viz.bib
+Warning--entry type for "QT17" isn't style-file defined
+--line 13 of file secure_viz.bib
+Warning--entry type for "MWB" isn't style-file defined
+--line 19 of file secure_viz.bib
+Warning--entry type for "S1" isn't style-file defined
+--line 25 of file secure_viz.bib
+Warning--entry type for "S2" isn't style-file defined
+--line 32 of file secure_viz.bib
+Warning--entry type for "S3" isn't style-file defined
+--line 40 of file secure_viz.bib
+You've used 6 entries,
+            2598 wiz_defined-function locations,
+            623 strings with 5118 characters,
+and the built_in function-call counts, 1202 in all, are:
+= -- 99
+> -- 42
+< -- 0
++ -- 18
+- -- 12
+* -- 35
+:= -- 198
+add.period$ -- 12
+call.type$ -- 6
+change.case$ -- 24
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 42
+empty$ -- 139
+format.name$ -- 12
+if$ -- 262
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 0
+newline$ -- 27
+num.names$ -- 12
+pop$ -- 51
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 54
+stack$ -- 0
+substring$ -- 30
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 0
+while$ -- 12
+width$ -- 7
+write$ -- 47
+(There were 6 warnings)
