@@ -16,45 +16,63 @@ Warning--entry type for "S2" isn't style-file defined
 --line 32 of file secure_viz.bib
 Warning--entry type for "S3" isn't style-file defined
 --line 40 of file secure_viz.bib
-You've used 6 entries,
+Warning--entry type for "S4" isn't style-file defined
+--line 48 of file secure_viz.bib
+Warning--entry type for "S5" isn't style-file defined
+--line 56 of file secure_viz.bib
+Warning--entry type for "S6" isn't style-file defined
+--line 62 of file secure_viz.bib
+Warning--entry type for "S7" isn't style-file defined
+--line 68 of file secure_viz.bib
+Warning--entry type for "S8" isn't style-file defined
+--line 76 of file secure_viz.bib
+Warning--entry type for "S9" isn't style-file defined
+--line 84 of file secure_viz.bib
+Warning--entry type for "S10" isn't style-file defined
+--line 91 of file secure_viz.bib
+Name 1 in "Nielsen, J., and Molich, R." has a comma at the end for entry S9
+while executing---line 2471 of file abbrv-doi.bst
+Name 1 in "Nielsen, J., and Molich, R." has a comma at the end for entry S9
+while executing---line 2555 of file abbrv-doi.bst
+You've used 13 entries,
             2598 wiz_defined-function locations,
-            623 strings with 5118 characters,
-and the built_in function-call counts, 1202 in all, are:
-= -- 99
-> -- 42
+            661 strings with 6255 characters,
+and the built_in function-call counts, 3073 in all, are:
+= -- 254
+> -- 169
 < -- 0
-+ -- 18
-- -- 12
-* -- 35
-:= -- 198
-add.period$ -- 12
-call.type$ -- 6
-change.case$ -- 24
++ -- 68
+- -- 54
+* -- 136
+:= -- 508
+add.period$ -- 26
+call.type$ -- 13
+change.case$ -- 66
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 42
-empty$ -- 139
-format.name$ -- 12
-if$ -- 262
+cite$ -- 13
+duplicate$ -- 91
+empty$ -- 300
+format.name$ -- 54
+if$ -- 656
 int.to.chr$ -- 0
-int.to.str$ -- 6
+int.to.str$ -- 13
 missing$ -- 0
-newline$ -- 27
-num.names$ -- 12
-pop$ -- 51
+newline$ -- 55
+num.names$ -- 26
+pop$ -- 128
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 53
 quote$ -- 0
-skip$ -- 54
+skip$ -- 114
 stack$ -- 0
-substring$ -- 30
-swap$ -- 6
+substring$ -- 66
+swap$ -- 13
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
+type$ -- 52
 warning$ -- 0
-while$ -- 12
-width$ -- 7
-write$ -- 47
-(There were 6 warnings)
+while$ -- 26
+width$ -- 15
+write$ -- 103
+(There were 2 error messages)
