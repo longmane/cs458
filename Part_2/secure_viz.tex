@@ -96,7 +96,7 @@ The benefits of this visualization is to provide a tool that allows users to eas
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
 %% please capitalize first letter and insert punctuation after last keyword
-\keywords{Security, malware}
+\keywords{information visualization, security, malware, phishing}
 
 %% ACM Computing Classification System (CCS). 
 %% See <http://www.acm.org/class/1998/> for details.
@@ -210,6 +210,14 @@ These help to display the distribution difference both with color and size, so t
 There was much discussion over the use of a red to green scale, since a number of colorblind people may be affected, but it made the most sense for our data, and the size difference help to provide a backup for this.
 
 \section{Enhancements}
+There were various improvements which were implemented that was different from out previous design. 
+Instead of using a scale to color all the boxes based on size, we decided to use unique pastel colors for each box to show they are differen't industries. 
+Past research has suggested that pastel colors are effective and a color gradient didn't make sense in this context \cite{S6}.
+Another ehancement was adding borders to the active industry and quarter in the visualization. 
+This improvement provides feedback to the user about which component of the interface is active. 
+Feedback is an important design heuristic based on the research done by Nielsen \cite{S9}.
+One improvement was sizing the boxes relative to the total number of attacks instead of static numbers. 
+By using dynamic sizes that change based on the number of attacks each quarter,  it allows users to accurately compare industries and look at the variability.  
 
 \section{Implementation}
 We will implement the ER diagram by putting the data from Symantec into a mySQL database that is hosted by OSU using PHP.
