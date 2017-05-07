@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex secure_viz"] 1494121183 "secure_viz.aux" "secure_viz.bbl" "secure_viz" 1494121183
+["bibtex secure_viz"] 1494188012 "secure_viz.aux" "secure_viz.bbl" "secure_viz" 1494188846
   "./abbrv-doi.bst" 1494096766 27244 4c23ed8d63be63dc39b9aab722083c7e ""
-  "secure_viz.aux" 1494121183 2370 19891f287114dcb24d2fdb7973c316c9 ""
+  "secure_viz.aux" 1494188845 2494 e029032ccc8169b7423c8de7f46dbb2b ""
   "secure_viz.bcf" 0 -1 0 ""
-  "secure_viz.bib" 1494121087 1364 b4ec02f351bbc87275c01a7fb6dd9397 ""
+  "secure_viz.bib" 1494187022 2925 ca84d8d0f6983f9c9fdec6ab95606356 ""
   (generated)
-  "secure_viz.bbl"
   "secure_viz.blg"
-["pdflatex"] 1494121183 "/Users/Will/GitHub/cs458/secure_viz.tex" "secure_viz.pdf" "secure_viz" 1494121183
-  "/Users/Will/GitHub/cs458/secure_viz.tex" 1494121181 15336 a662deaaca47273c090cea2b6622afe6 ""
+  "secure_viz.bbl"
+["pdflatex"] 1494188845 "/Users/Will/GitHub/cs458/secure_viz.tex" "secure_viz.pdf" "secure_viz" 1494188846
+  "/Users/Will/GitHub/cs458/secure_viz.tex" 1494188845 16062 b0c9c0ba34545dfc0e1e8e8104ed2dc5 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/adobe/helvetic/phvb7t.tfm" 1136768653 2240 eb56c13537f4d8a0bd3fafc25572b1bd ""
@@ -83,13 +83,13 @@
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1463979169 3873397 413fbfbbedb8e719ddc392043a7add02 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "diamondrule.pdf" 1494096766 1335 e82887b13e7469ef004fc36f59818f7a ""
-  "secure_viz.aux" 1494121183 2370 19891f287114dcb24d2fdb7973c316c9 ""
-  "secure_viz.bbl" 1494121183 578 93976d133ceb6541ff2850695c1fb575 "bibtex secure_viz"
-  "secure_viz.out" 1494121183 927 9ed57526af7dd3ba1f9c24eb7ffdb6fd ""
-  "secure_viz.tex" 1494121181 15336 a662deaaca47273c090cea2b6622afe6 ""
+  "secure_viz.aux" 1494188845 2494 e029032ccc8169b7423c8de7f46dbb2b ""
+  "secure_viz.bbl" 1494188012 1476 99ff3ad5978aeb3b8b9ac7bde61229f8 "bibtex secure_viz"
+  "secure_viz.out" 1494188845 873 b80016f6697c016dfca7ef9b349755c8 ""
+  "secure_viz.tex" 1494188845 16062 b0c9c0ba34545dfc0e1e8e8104ed2dc5 ""
   "vgtc.cls" 1494096766 32703 a647890a92b54c8c749f342e876d0207 ""
   (generated)
-  "secure_viz.aux"
-  "secure_viz.log"
   "secure_viz.pdf"
+  "secure_viz.aux"
   "secure_viz.out"
+  "secure_viz.log"

@@ -1,15 +1,25 @@
-\begin{thebibliography}{1}
-
-\bibitem{S1}
-S.~E. Carrie~Gates.
-\newblock Reflecting on visualization for cyber security, 2013.
+\begin{thebibliography}{10}
 
 \bibitem{S2}
-D.~K. Daniel M.~Best, Alex~Endert.
+D.~Best, A.~Endert, and D.~Kidwell.
 \newblock 7 key challenges for visualization in cyber network defense, 2014.
 
+\bibitem{S8}
+N.~Elmqvist, A.~Vande~Moere, H.-C. Jetter, D.~Cernea, H.~Reiterer, and
+  T.~Jankun-Kelly.
+\newblock Fluid interaction for information visualization, 2011.
+
+\bibitem{S6}
+D.~Fallman.
+\newblock The interaction design research triangle of design practice, design
+  studies, and design exploration, 2008.
+
+\bibitem{S1}
+C.~Gates and S.~Engle.
+\newblock Reflecting on visualization for cyber security, 2013.
+
 \bibitem{S3}
-A.~B. John T.~Langton.
+J.~Langton and A.~Baker.
 \newblock Information visualization metrics and methods for cyber security
   evaluation, 2013.
 
@@ -21,8 +31,30 @@ Malwarebytes.
 McAfee.
 \newblock Threat reports.
 
+\bibitem{S9}
+J.~Nielsen and R.~Molich.
+\newblock Heuristic evaluation of user interfaces, 1990.
+
+\bibitem{S5}
+T.~O’Connell and Y.-Y. Choong.
+\newblock Metrics for measuring human interaction with interactive
+  visualizations for information analysis, 2008.
+
+\bibitem{S10}
+B.~Shoemate.
+\newblock Stock market visualizations, 2015.
+
+\bibitem{S4}
+X.~Suo, Y.~Zhu, and G.~Owen.
+\newblock Measuring the complexity of computer security visualization designs,
+  2007.
+
 \bibitem{SMR}
 Symantec.
 \newblock Symantec monthly report.
+
+\bibitem{S7}
+A.~Vande~Moere and H.~Purchase.
+\newblock On the role of design in information visualization, 2011.
 
 \end{thebibliography}
