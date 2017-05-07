@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Security Attacks by Industry</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<script type="text/javascript" src="jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="jquery.sparkline.js"></script>
+		<script type="text/javascript" src="scripts.js"></script> 
+
+	</head>
+	<body>
+		<div id="big=wrapper">
+			<div id="box-wrapper">
+				<div class="box" id="box1" onClick="showPie(1)"><span>Public Admin.</span></div>
+				<div class="box" id="box2" onClick="showPie(2)"><span>Finance</span></div>
+				<div class="box" id="box3" onClick="showPie(3)"><span>Construction</span></div>
+				<div class="box" id="box4" onClick="showPie(4)"><span>Mining</span></div>
+			</div>
+			<div id="box-wrapper-bot">
+				<div class="box" id="box5" onClick="showPie(5)"><span>Services</span></div>
+				<div class="box" id="box6" onClick="showPie(6)"><span>Retail</span></div>
+				<div class="box" id="box7" onclick="showPie(7)"><span>Wholesale Trade</span></div>
+				<div class="box" id="box8" onClick="showPie(8)"><span>Manufacturing</span></div>
+			</div><br>
+			<div id="months-bar">
+				<div class="month-buttons" id="q1-button" onClick="changeQuarter('q1')">Quarter 1 2016</div>
+				<div class="month-buttons" id="q2-button" onClick="changeQuarter('q2')">Quarter 2 2016</div>
+				<div class="month-buttons" id="q3-button" onClick="changeQuarter('q3')">Quarter 3 2016</div>
+				<div class="month-buttons" id="q4-button" onClick="changeQuarter('q4')">Quarter 4 2016</div>
+
+			</div>
+			<div id="pie-wrapper">
+				<span>Cyber attack type distribution:</span><br>
+				<span id="current-industry"> </span>
+				<span style="white-space:nowrap;" id="dynamic-chart">Select an industry to view attack breakdown.</span>
+				<br><br><br><span id="total-attacks"> </span>
+			</div>
+		</div>
+	</body>
+</html>
