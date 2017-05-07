@@ -29,7 +29,7 @@ function showPie(boxNum){
 			1: 'Malware'
 		}
 	},
-    height: '300'});
+    height: '260'});
 	$('#box-wrapper').find('.box').removeClass("selected-box");
 	$('#box-wrapper-bot').find('.box').removeClass("selected-box");
 	$('#box'.concat(boxNum.toString())).addClass("selected-box");
