@@ -14,7 +14,8 @@ span, text, div{
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	transition: all 0.5s;
+	transition: all 0.8s;
+	cursor: pointer;
 
 }
 .box span{
@@ -34,6 +35,7 @@ span, text, div{
 	text-align: center;
 	color: white;
 	font-weight: bold;
+	cursor: pointer;
 }
 .pies{
 	background-color: green;
