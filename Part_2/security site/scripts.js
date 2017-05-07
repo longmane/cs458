@@ -1,3 +1,6 @@
+// This code makes use of the jQuery Sparklines package found at http://omnipotent.net/jquery.sparkline/#s-about authored by Gareth Watts and licensed under the NewBSD License.
+
+
 var quarter = "q1";
 var currentBox = 0;
 var q1Data = '{ "admin": { "height": "114", "malware": "299", "phishing": "5985", "total": "6284" }, "finance": { "height": "135", "malware": "502", "phishing": "6927", "total": "7429" }, "construction": { "height": "200", "malware": "385", "phishing": "10655", "total": "11040" }, "mining": { "height": "161", "malware": "411", "phishing": "8465", "total": "8876" }, "services": { "height": "141", "malware": "238", "phishing": "7568", "total": "7806" }, "retail": { "height": "143", "malware": "247", "phishing": "7623", "total": "7870" }, "trade": { "height": "178", "malware": "371", "phishing": "9468", "total": "9839" }, "manufac": { "height": "172", "malware": "394", "phishing": "9083", "total": "9477" } }';
