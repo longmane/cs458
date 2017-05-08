@@ -201,13 +201,42 @@ For the purposes of our project, we used the data from Symantec for the visualiz
 
 \subsection{Design Comparison}
 There were many iterations of design ideas that went into this visualization page, ranging from grand scheme design choices to small implementation tweaks.
-This basic framework stayed throughout the process, but the design of it evolved over time. 
-A scroll bar for different months of data was one of the big things that was added, as well as a pie chart breaking down the data within each category upon clicking on one.
+This basic framework of having boxes represent different industries stayed throughout the process.
 Each of the industries has their own section, and these all contain data about which types of attacks are most prevalent.
+We had initially planned on lining up the boxes from biggest to smallest, but decided to use a cluster of the boxes instead so you can view more information at once.
+This is also more aesthtically pleasing.
+Our final design to represent the number of attacks for the industries in Figure 1 took inspiration from the stock market visualization in Figure 2.
 
-A number of arrangement ideas for the data were compared, with the look eventually settling on one of differently sized and colored blocks.
-These help to display the distribution difference both with color and size, so that someone with some form of visual impairment is likely to still be able to tell the difference.
-There was much discussion over the use of a red to green scale, since a number of colorblind people may be affected, but it made the most sense for our data, and the size difference help to provide a backup for this.
+\begin{figure}[tb]
+  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+  \includegraphics[width=\columnwidth]{final_design1}
+  \caption{Final design for the layout of the different industries and number of attacks.}
+  \label{fig:sample}
+\end{figure}
+
+\begin{figure}[tb]
+  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+  \includegraphics[width=\columnwidth]{stock_market}
+  \caption{Our design took inspiration from this visualization on stock market data by industy.}
+  \label{fig:sample}
+\end{figure}
+
+We came up with a few different ideas for how we would show the distribution of cyber attack types in each industry.
+We considered putting pie charts of the data inside of the boxes, but felt that this was confusing and it would be unclear what the the box represents. 
+This problem was solved by placing the pie charts below the industry boxes, and you can view the attack type breakdown by clicking on the box that corresponds to the industry which you can see in Figure 3.
+
+\begin{figure}[tb]
+  \centering % avoid the use of \begin{center}...\end{center} and use \centering instead (more compact)
+  \includegraphics[width=\columnwidth]{final_design2}
+  \caption{Final design for the breakdown of the types of cyber attacks within an industy.}
+  \label{fig:sample}
+\end{figure}
+
+Initially, we had planned on putting the total number of attacks inside the boxes, but some of the boxes ended up getting so small that we didn't want to clutter the interface. 
+We settled on putting the total number of attacks below the pie chart.
+The sizing of the boxes already allows users to get an idea of how often an industy is targeted by cyber attacks. 
+We also considered showing data for every month of the year, but felt quarters would be more useful since it allows you to see trends over three months. 
+
 
 \section{Enhancements}
 There were various improvements which were implemented that was different from out previous design. 
