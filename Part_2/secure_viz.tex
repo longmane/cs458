@@ -196,6 +196,14 @@ The aspects which did the best and were implemented are as follows:
 \end{itemize} 
 
 All of these were combined in some way to create the final version of the visualization.
+There were many iterations of design ideas that went into this visualization page, ranging from grand scheme design choices to small implementation tweaks.
+This basic framework stayed throughout the process, but the design of it evolved over time. 
+A scroll bar for different months of data was one of the big things that was added, as well as a pie chart breaking down the data within each category upon clicking on one.
+Each of the industries has their own section, and these all contain data about which types of attacks are most prevalent.
+
+A number of arrangement ideas for the data were compared, with the look eventually settling on one of differently sized and colored blocks.
+These help to display the distribution difference both with color and size, so that someone with some form of visual impairment is likely to still be able to tell the difference.
+There was much discussion over the use of a red to green scale, since a number of colorblind people may be affected, so the colors of different sectors were changed to be unique.
 The same tactics that were used to assess the preexisting security visualizations were also used for the assessment of the final product, as is described in the Results and Performance below.
 
 \subsection{Visualization Tasks}
@@ -264,16 +272,6 @@ Feedback is an important design heuristic based on the research done by Nielsen 
 One improvement was sizing the boxes relative to the total number of attacks instead of static numbers. 
 By using dynamic sizes that change based on the number of attacks each quarter,  it allows users to accurately compare industries and look at the variability.  
 
-\section{Design Comparison}
-There were many iterations of design ideas that went into this visualization page, ranging from grand scheme design choices to small implementation tweaks.
-This basic framework stayed throughout the process, but the design of it evolved over time. 
-A scroll bar for different months of data was one of the big things that was added, as well as a pie chart breaking down the data within each category upon clicking on one.
-Each of the industries has their own section, and these all contain data about which types of attacks are most prevalent.
-
-A number of arrangement ideas for the data were compared, with the look eventually settling on one of differently sized and colored blocks.
-These help to display the distribution difference both with color and size, so that someone with some form of visual impairment is likely to still be able to tell the difference.
-There was much discussion over the use of a red to green scale, since a number of colorblind people may be affected, but it made the most sense for our data, and the size difference help to provide a backup for this.
-
 \section{Implementation}
 Our original plan for implementation before we started was a standard front end with a mySQL back end. The database 
 would contain data on the number and type of attacks per industry, per month for the year of 2016. We quickly found
@@ -321,6 +319,9 @@ To do this test users were asked to answer a few simple questions with the data 
 For instance, they were asked "Which industry had the most attacks in the spring of 2016" which they would need to interact with the visualization to answer.
 Their usage was observed while completing these tasks, which allowed for assessment of which portions might be confusing or misleading.
 
+The results of these user test showed that our visualization was both easy to used and effective in communication of data.
+The only portion that caused one user a problem was the colors of the separate sectors, which the user believed to be somehow significant.
+All other users were able to efficiently answer the questions proposed to them using the interactive data.
 
 \section{Conclusions and Future Work}
 The visualization was effective at showing the industries that are most targeted by cyber attacks. 
