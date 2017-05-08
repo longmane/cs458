@@ -179,8 +179,24 @@ The guidelines closely followed Nielsen’s 10 usability heuristics \cite{S9}.
 Lastly, The design of our visualization was influenced by the stock market visualizations that organized all of the data by industry sector \cite{S10}. 
 
 \section{Method}
+A variety of methods went into the creation of this visualization, ranging from color theory to empirical research.
+Much of the visualization ideas were taken from preexisting security data compilations.
+To define the best way of displaying this dataset, much analysis was done to determine which similar ones were most effective.
+This was done by assessing which infographics were easiest for users to understand. 
 
 \subsection{Method Overview}
+To assess the preexisting visualizations, users unaffiliated with the subject and with security were asked to answer question using them.
+The ones with which the users were able to most easily answer questions were the design ideas that were implemented.
+The aspects which did the best and were implemented are as follows:
+\begin{itemize}
+  \item Color usages associated with positive or negative traits (specifically red and green) 
+  \item Visually simple data
+  \item Multiple levels of increasingly specific information
+  \item Infographics rather than graphs
+\end{itemize} 
+
+All of these were combined in some way to create the final version of the visualization.
+The same tactics that were used to assess the preexisting security visualizations were also used for the assessment of the final product, as is described in the Results and Performance below.
 
 \subsection{Visualization Tasks}
 The question we are trying to answer is what industries are most vulnerable to cyber attacks and what types of attacks are most prevalent. 
@@ -234,15 +250,15 @@ This problem was solved by placing the pie charts below the industry boxes, and 
 
 Initially, we had planned on putting the total number of attacks inside the boxes, but some of the boxes ended up getting so small that we didn't want to clutter the interface. 
 We settled on putting the total number of attacks below the pie chart.
-The sizing of the boxes already allows users to get an idea of how often an industy is targeted by cyber attacks. 
+The sizing of the boxes already allows users to get an idea of how often an industry is targeted by cyber attacks. 
 We also considered showing data for every month of the year, but felt quarters would be more useful since it allows you to see trends over three months. 
 
 
 \section{Enhancements}
 There were various improvements which were implemented that was different from out previous design. 
-Instead of using a scale to color all the boxes based on size, we decided to use unique pastel colors for each box to show they are differen't industries. 
+Instead of using a scale to color all the boxes based on size, we decided to use unique pastel colors for each box to show they are different industries. 
 Past research has suggested that pastel colors are effective and a color gradient didn't make sense in this context \cite{S6}.
-Another ehancement was adding borders to the active industry and quarter in the visualization. 
+Another enhancement was adding borders to the active industry and quarter in the visualization. 
 This improvement provides feedback to the user about which component of the interface is active. 
 Feedback is an important design heuristic based on the research done by Nielsen \cite{S9}.
 One improvement was sizing the boxes relative to the total number of attacks instead of static numbers. 
@@ -261,11 +277,11 @@ There was much discussion over the use of a red to green scale, since a number o
 \section{Implementation}
 Our original plan for implementation before we started was a standard front end with a mySQL back end. The database 
 would contain data on the number and type of attacks per industry, per month for the year of 2016. We quickly found
-that this was not feasible, as we did not have the resources or knowlege necessary to make a persistant database for
+that this was not feasible, as we did not have the resources or knowledge necessary to make a persistent database for
 the project, and the data was of such scale that entering it manually was too big a task. The data was not in a friendly
 format for scraping, and so we had to make our scope easier to handle. We decided to instead use a JSON format for the 
 data, and organized the data by quarter instead of by month. The JSON data (contained in the scripts.js file) is much
-more managable and simple to use, getting the job done as well as a database would without significant overhead.
+more manageable and simple to use, getting the job done as well as a database would without significant overhead.
 Organizing the data by quarter also may have improved the visualization, as cluttering the screen with twelve options
 to select may be more confusing for the user.
 
@@ -278,31 +294,37 @@ but this was the root of the issue as the constraint to a single forces an odd l
 sufficiently wide browsers. In addition, while observing the design, we found that it might be confusing for the industry
 boxes to move around as much as we proposed they would, as users may not be aware the boxes no longer were for the same 
 industry. We remedied this with a significant change in design, by forcing a second line for half the boxes. This change 
-was one of the largest deviations from the design. This change later neccesitated another change to the design to make
+was one of the largest deviations from the design. This change later necessitated another change to the design to make
 it more fluid and visually appealing. Instead of having the boxes in both rows simply grow and shrink in place, we made
 all of the boxes aligned near the center of the figure, and never changing position. While not only visually appealing, this better allows something 
 we were missing in previous designs, the highlight of the boxes relative to each other. With boxes that are changing position
-it is difficult to comapre them to other boxes, and do an industry to industry comparison. When the boxes stay in place, 
+it is difficult to compare them to other boxes, and do an industry to industry comparison. When the boxes stay in place, 
 however, it is easy to compare them to each other. They also now slightly shift position in response to the change in size
 of their neighbors, keeping the figure looking fluid and dynamic. Because of the shape of this new figure, we had to change 
 how the popup menu works as well.
 
 The pie popup in the design was changed in favor of a static location on the page. This was done to avoid covering up any 
 boxes, as such a thing was a possibility with the new changes to the figure layout. Moving the pie chart to a static 
-location also allowed us to add extra information that was lost when we removed the third menu in our second desgin. In 
+location also allowed us to add extra information that was lost when we removed the third menu in our second design. In 
 addition to being a cleaner and more informative method, it also allowed us to use the jQuery plugin Sparklines by Gareth Watts to 
 generate the pie chart easily. It would not be as easy if the pie chart had a dynamic location. As for the pie chart itself,
 rather than use a key, we took advantage of the package and used the hover labels included. The colors used in the pie chart
 are colors taken from two of the boxes. These box colors are pastels, which promote attention to the visualization and are 
 also good colors that are not jarring, yet still distinct enough to avoid confusing the boxes. The original design included
 colors as a heat map, but it was found that unless we wanted to set arbitrary number to change color at, heatmaps were 
-unessesary as the information is already presented in number and in the size of the boxes.
+unnecessary as the information is already presented in number and in the size of the boxes.
 
 \section{Results and Performance}
+After having fully implemented the visualization it was tested on a number of users unfamiliar with both security and information visualization. 
+These users helped to provide useful feedback on both the clarity and effectiveness of the final product. 
+To do this test users were asked to answer a few simple questions with the data interface provided.
+For instance, they were asked "Which industry had the most attacks in the spring of 2016" which they would need to interact with the visualization to answer.
+Their usage was observed while completing these tasks, which allowed for assessment of which portions might be confusing or misleading.
+
 
 \section{Conclusions and Future Work}
 The visualization was effective at showing the industries that are most targeted by cyber attacks. 
-The size of the cell was used to show how many times a certain industry is attacked in a given fincancial quarter and users were able to easily understand.
+The size of the cell was used to show how many times a certain industry is attacked in a given financial quarter and users were able to easily understand.
 Future work may include exploring what other types of information we can put in the boxes such as the change since last quarter, total attacks, and types of attacks. 
 Due to time constraints, we were unable to test these ideas in our design.
 This topic has a wide variety of data sources which can be combined and compared in interesting ways to draw a variety of conclusions.
