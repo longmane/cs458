@@ -1,0 +1,208 @@
+\documentclass[journal]{vgtc}                % final (journal style)
+%\documentclass[review,journal]{vgtc}         % review (journal style)
+%\documentclass[widereview]{vgtc}             % wide-spaced review
+%\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication, and the final version
+%% doesn't use a specific qualifier.
+
+%% Please use one of the ``review'' options in combination with the
+%% assigned online id (see below) ONLY if your paper uses a double blind
+%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
+%% in the past.
+
+%% Please note that the use of figures other than the optional teaser is not permitted on the first page
+%% of the journal version.  Figures should begin on the second page and be
+%% in CMYK or Grey scale format, otherwise, colour shifting may occur
+%% during the printing process.  Papers submitted with figures other than the optional teaser on the
+%% first page will be refused. Also, the teaser figure should only have the
+%% width of the abstract as the template enforces it.
+
+%% These few lines make a distinction between latex and pdflatex calls and they
+%% bring in essential packages for graphics and font handling.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+%%
+\ifpdf%                                % if we use pdflatex
+  \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
+  \pdfcompresslevel=9                  % PDF Compression
+  \pdfoptionpdfminorversion=7          % create PDF 1.7
+  \ExecuteOptions{pdftex}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} % for pdflatex we expect .pdf, .png, or .jpg files
+\else%                                 % else we use pure latex
+  \ExecuteOptions{dvips}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.eps}     % for pure latex we expect eps files
+\fi%
+
+%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
+\graphicspath{{figures/}{pictures/}{images/}{./}} % where to search for the images
+
+\usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
+\PassOptionsToPackage{warn}{textcomp}  % to address font issues with \textrightarrow
+\usepackage{textcomp}                  % use better special symbols
+\usepackage{mathptmx}                  % use matching math font
+\usepackage{times}                     % we use Times as the main font
+\renewcommand*\ttdefault{txtt}         % a nicer typewriter font
+\usepackage{cite}                      % needed to automatically sort the references
+%\usepackage{tabu}                      % only used for the table example
+%\usepackage{booktabs}                  % only used for the table example
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
+%% In preprint mode you may define your own headline.
+%\preprinttext{To appear in IEEE Transactions on Visualization and Computer Graphics.}
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{0}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+%% please declare the paper type of your paper to help reviewers, only shown in review mode
+%% choices:
+%% * algorithm/technique
+%% * application/design study
+%% * evaluation
+%% * system
+%% * theory/model
+\vgtcpapertype{evaluation}
+
+%% Paper title.
+\title{Improvements to a Linguistic Approach to Color Assignment}
+
+%% This is how authors are specified in the journal style
+
+%% indicate IEEE Member or Student Member in form indicated below
+\author{Mikky Cecil, Emily Longman, and Jacob Lewis}
+
+%other entries to be set up for journal
+\shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: Improvements to a Linguistic Approach to Color Assignment}
+%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+
+%% Abstract section.
+\abstract{  
+} % end of abstract
+
+%% Keywords that describe your work. Will show as 'Index Terms' in journal
+%% please capitalize first letter and insert punctuation after last keyword
+\keywords{information visualization, linguistics, color theory, linguistic relativity}
+
+%% ACM Computing Classification System (CCS). 
+%% See <http://www.acm.org/class/1998/> for details.
+%% The ``\CCScat'' command takes four arguments.
+
+\CCScatlist{ % not used in journal version
+ \CCScat{K.6.1}{Management of Computing and Information Systems}%
+{Project and People Management}{Life Cycle};
+ \CCScat{K.7.m}{The Computing Profession}{Miscellaneous}{Ethics}
+}
+
+%% Uncomment below to include a teaser figure.
+
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+% \nocopyrightspace
+
+\vgtcinsertpkg
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+
+%% the only exception to this rule is the \firstsection command
+%%\firstsection{Introduction}
+
+\maketitle
+
+\section{Introduction} %for journal use above \firstsection{..} instead
+Quickly generating color palettes for categorical information is a challenge in InfoViz, particularly if the values already have strong color associations (for example, if one had a list of fruits, readers may be thrown off if a pie chart was cut into an orange section labeled \"apples,\" and a red section labeled \"oranges\"). 
+The paper \"A Linguistic Approach to Categorical Color Assignment
+for Data Visualization\" by Vidya Setlur and Maureen C. Stoneaimed \cite{basis}
+explores an algorithm which used to use natural language processing in order to generate color palettes, building off of (and comparing to) prior research. 
+Like some prior research, they wanted to use Google image searches and statistics to discern whether or not a word had a strong color association with it, and if so, what color best represented that word. What was different about this research was that it also applied contextual information to the colors---for example, the word \"apple\" could either mean a red fruit or a silver tech brand, depending on the context.
+
+\section{Related Work}
+The subject color differentiation has always been a big one.
+Many different researchers in a variety of fields have attempted to work on this.
+This specific topic in InfoViz doesn't have much previous research, but the field of linguistic relativity has investigated it.
+Many looked at it from a linguistic, cultural, or anthropological perspective, including a paper by Terry Regier and Paul Kay which asserted that \"1, language influences color perception primarily in half
+the visual field, and 2, color naming across languages is
+shaped by both universal and language-specific forces\" \cite{Whorf}
+
+A different paper from a group of Psychology researchers ran three different experiments on subjects' ability to differentiate colors, if practiced helped this, and how hue and lightness affected this.
+The results of this lend themselves to the theory that language does have an effect on color perception. \cite{ozgen}
+
+A number of different strategies have been implemented in more computerized studies, such as using color palettes designed by experts, sourcing images from Google and using n-grams, and even scraping Flickr annotations.
+The researchers from the paper off which we're building used all of these previous attempts to test the validity of their own methods and algorithms.
+
+
+\subsection{Challenges in Visualization}
+One of the biggest problems that this study faced was the light to dark variance in some of the final palettes.
+Legibility and harmonic differences made them less than consistent.
+The goal of our project was to adjust the way these were generated so that these negative side effects could be minimized.
+We did not have access to the actual algorithm used by the researchers so this meant we had to get creative with our methods.
+
+
+\section{Research Design}
+The basic steps involved in our solution to reducing errors in the output colors are:
+\begin{itemize}
+  \item Augment the algorithm that the authors of the paper created
+  \item Perform multiple searches for same color with adjectives such as \'light\', \'pale\', \'deep\', or \'dark\'
+  \item Throw out outliers and find average of these colors
+  \item Obtain results that should reduce the errors that the author saw with dark colors
+\end{itemize}
+
+\section{Methods}
+
+\subsection{Method Overview}
+There was a general methodology followed to produce our improved palette outputs.
+First colors were searched on google using four adjectives: light, pale, deep, dark.
+Next we collected average color of images using a color averaging tool found on github. \cite{avg}
+Then the outliers were thrown out and an average was found for all four adjectives.
+A color palette from each of these adjectives for each color was then created.
+Next we found standard color name conventions from schemes including X11 and HTML4.
+Then the difference between our color and the standard was calculated.
+Lastly we compared our difference to that of the authors of the original paper’s difference.
+
+\subsection{Visualization Tasks}
+
+
+\subsection{Data Sources}
+
+
+\subsection{Design Comparison}
+
+
+\section{Implementation}
+Code we used and specifics of getting it to work goes here.
+
+
+\section{Results and Performance}
+
+
+\section{Conclusions and Future Improvements}
+
+
+%\bibliographystyle{abbrv}
+\bibliographystyle{abbrv-doi}
+%\bibliographystyle{abbrv-doi-narrow}
+%\bibliographystyle{abbrv-doi-hyperref}
+%\bibliographystyle{abbrv-doi-hyperref-narrow}
+
+\bibliography{color_viz}
+\end{document}
