@@ -130,19 +130,19 @@
 \maketitle
 
 \section{Introduction} %for journal use above \firstsection{..} instead
-Quickly generating color palettes for categorical information is a challenge in InfoViz, particularly if the values already have strong color associations (for example, if one had a list of fruits, readers may be thrown off if a pie chart was cut into an orange section labeled \"apples,\" and a red section labeled \"oranges\"). 
-The paper \"A Linguistic Approach to Categorical Color Assignment
-for Data Visualization\" by Vidya Setlur and Maureen C. Stoneaimed \cite{basis}
+Quickly generating color palettes for categorical information is a challenge in InfoViz, particularly if the values already have strong color associations (for example, if one had a list of fruits, readers may be thrown off if a pie chart was cut into an orange section labeled ``apples,'' and a red section labeled ``oranges''). 
+The paper ``A Linguistic Approach to Categorical Color Assignment
+for Data Visualization'' by Vidya Setlur and Maureen C. Stoneaimed \cite{basis}
 explores an algorithm which used to use natural language processing in order to generate color palettes, building off of (and comparing to) prior research. 
-Like some prior research, they wanted to use Google image searches and statistics to discern whether or not a word had a strong color association with it, and if so, what color best represented that word. What was different about this research was that it also applied contextual information to the colors---for example, the word \"apple\" could either mean a red fruit or a silver tech brand, depending on the context.
+Like some prior research, they wanted to use Google image searches and statistics to discern whether or not a word had a strong color association with it, and if so, what color best represented that word. What was different about this research was that it also applied contextual information to the colors---for example, the word ``apple'' could either mean a red fruit or a silver tech brand, depending on the context.
 
 \section{Related Work}
 The subject color differentiation has always been a big one.
 Many different researchers in a variety of fields have attempted to work on this.
 This specific topic in InfoViz doesn't have much previous research, but the field of linguistic relativity has investigated it.
-Many looked at it from a linguistic, cultural, or anthropological perspective, including a paper by Terry Regier and Paul Kay which asserted that \"1, language influences color perception primarily in half
+Many looked at it from a linguistic, cultural, or anthropological perspective, including a paper by Terry Regier and Paul Kay which asserted that ``1, language influences color perception primarily in half
 the visual field, and 2, color naming across languages is
-shaped by both universal and language-specific forces\" \cite{Whorf}
+shaped by both universal and language-specific forces'' \cite{Whorf}
 
 A different paper from a group of Psychology researchers ran three different experiments on subjects' ability to differentiate colors, if practiced helped this, and how hue and lightness affected this.
 The results of this lend themselves to the theory that language does have an effect on color perception. \cite{ozgen}
@@ -155,7 +155,7 @@ The researchers from the paper off which we're building used all of these previo
 One of the biggest problems that this study faced was the light to dark variance in some of the final palettes.
 Legibility and harmonic differences made them less than consistent.
 The goal of our project was to adjust the way these were generated so that these negative side effects could be minimized.
-We did not have access to the actual algorithm used by the researchers so this meant we had to get creative with our methods.
+We did not have access to the actual algorithm used by the researchers, so this meant we had to get creative with our methods.
 
 
 \section{Research Design}
